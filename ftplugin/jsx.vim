@@ -26,11 +26,10 @@ function! s:PutIntoBuffer(buffer, text)
 endfunction
 
 
-function! JsxCompile()
+function! JsxCompile(startline, endline)
   " create the output buffer unless it already exists
   if bufwinnr(b:output_buffer) == -1
     let source_buffer = bufnr('%')
-
     let scratch_buffer = s:BuildOutputBuffer()
 
     call s:SwitchToWindow(source_buffer)
@@ -38,7 +37,7 @@ function! JsxCompile()
   endif
 
   " send source buffer contents to JSX compiler and grab the output
-  let jsxCode = join(getline(1,'$'), "\n")
+  let jsxCode = join(getline(a:startline, a:endline), "\n")
   let jsxCommand = 'node jsx-compile.js "' . jsxCode . '"'
   let text = system(jsxCommand)
 
@@ -49,4 +48,4 @@ if !exists('b:output_buffer')
   let b:output_buffer = -1
 endif
 
-command! -nargs=* JsxCompile :call JsxCompile()
+command! -nargs=* -range=% -bar JsxCompile call JsxCompile(<line1>, <line2>)

@@ -15,7 +15,5 @@ Run the command in normal mode to convert the whole file, or on a visual selecti
 
 ## ToDo
 
-* Error handling
-* Buffer window size managament
-* Visual mode selection support
 * Node packaging
+* Auto-detect JSX - run `set filetype=jsx` for the moment
