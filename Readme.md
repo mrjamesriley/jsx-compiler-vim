@@ -20,4 +20,5 @@ Run the command in normal mode to convert the whole file, or on a visual selecti
 
 ## ToDo
 
-* Node packaging
+* Have compiled Javascript output syntax highlighted
+* Look to add linting support and other helpful output
