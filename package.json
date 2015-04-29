@@ -1,0 +1,13 @@
+{
+  "name": "jsx-compiler-vim",
+  "version": "0.0.1",
+  "description": "Provides ability to compile JSX to JS, directly within Vim",
+  "author": "James Riley",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrjamesriley/jsx-compiler-vim"
+  },
+  "dependencies": {
+    "react-tools": "*"
+  }
+}

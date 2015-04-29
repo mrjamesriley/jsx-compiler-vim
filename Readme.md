@@ -4,8 +4,13 @@ An experiment in providing the ability to easily preview the result of compiling
 
 ## Requirements
 
-* `node`
-* `react-tools` NPM package
+* `nodeJS` - required to run react-tools
+* `react-tools` - NPM package which handles the compilation
+
+# Installation
+
+1. Install with [Pathogen](https://github.com/tpope/vim-pathogen), cloning into `~/.vim/bundle`
+2. Run `npm install` within `~/.vim/bundle/jsx-compiler-vim` to grab `react-tools` 
 
 ## Usage
 
